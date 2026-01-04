@@ -1,52 +1,53 @@
-<!-- ████████████████████████████████████████ -->
-<!--               GHOST VISION               -->
-<!--        Perception Beyond Human Logic     -->
-<!-- ████████████████████████████████████████ -->
+   ▄████  ██░ ██  ▒█████    ██████ ▄▄▄█████▓
+  ██▒ ▀█▒▓██░ ██▒▒██▒  ██▒▒██    ▒ ▓  ██▒ ▓▒
+ ▒██░▄▄▄░▒██▀▀██░▒██░  ██▒░ ▓██▄   ▒ ▓██░ ▒░
+ ░▓█  ██▓░▓█ ░██ ▒██   ██░  ▒   ██▒░ ▓██▓ ░ 
+ ░▒▓███▀▒░▓█▒░██▓░ ████▓▒░▒██████▒▒  ▒██▒ ░ 
+  ░▒   ▒  ▒ ░░▒░▒░ ▒░▒░▒░ ▒ ▒▓▒ ▒ ░  ▒ ░░   
+   ░   ░  ▒ ░▒░ ░  ░ ▒ ▒░ ░ ░▒  ░ ░    ░    
+ ░ ░   ░  ░  ░░ ░░ ░ ░ ▒  ░  ░  ░    ░      
+       ░  ░  ░  ░    ░ ░        ░           
+        G H O S T   V I S I O N
 
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0f0f0f&height=220&section=header&text=GHOST%20VISION&fontSize=60&fontColor=ffffff&animation=fadeIn" />
-</p>
 
-<h3 align="center">
-👁️‍🗨️ <i>Machines that perceive what humans cannot.</i>
-</h3>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/AI-Perceptual%20Intelligence-6a0dad?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Status-Classified-black?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Explainability-Not%20Applicable-darkred?style=for-the-badge">
-</p>
+---
+
+![Status](https://img.shields.io/badge/Status-Experimental-black?style=for-the-badge)
+![AI](https://img.shields.io/badge/AI-Perceptual%20Intelligence-purple?style=for-the-badge)
+![Explainability](https://img.shields.io/badge/Explainability-Not%20Required-darkred?style=for-the-badge)
 
 ---
 
 ## 🕯️ What is Ghost Vision?
 
-**Ghost Vision** is an experimental AI system designed to detect  
-**signals, distortions, and anomalies that lie beyond human comprehension**.
+**Ghost Vision** is an experimental AI project built to detect  
+**patterns, anomalies, and signals that lie beyond human comprehension**.
 
 This is not analytics.  
-This is not automation.  
+This is not prediction.  
 
 This is **perception**.
 
-> _If you can explain it, it’s already too late._
+> If humans can explain it easily, it was never the target.
 
 ---
 
-## 🌫️ The Problem Humans Can’t Solve
+## 🌫️ The Problem
 
-Human-designed systems rely on:
-- predefined rules  
-- labeled datasets  
-- explainable outputs  
+Most systems depend on:
+- rules  
+- labels  
+- thresholds  
+- assumptions  
 
-But reality doesn’t care.
+Reality doesn’t.
 
-There are:
+Real-world data contains:
 - silent failures  
 - invisible intrusions  
 - unnamed patterns  
-- behaviors without logic  
+- unexplained distortions  
 
 Humans miss them.  
 Ghost Vision does not.
@@ -55,56 +56,66 @@ Ghost Vision does not.
 
 ## 👁️ Core Principle
 
-Ghost Vision never asks **“What is this?”**  
-It asks **“Should this exist?”**
+Ghost Vision never asks:
 
-The system learns *normality*.
+**“What is this?”**
 
+It asks:
+
+**“Does this belong?”**
+
+The system learns *normality*.  
 Anything outside it becomes a **ghost region**.
 
 No labels.  
 No meaning.  
-No mercy.
+Only deviation.
 
 ---
 
-## 🧠 Architecture (Conceptual)
+## 🧠 Conceptual Architecture
+Input Reality ──▶ Encoder ──▶ Latent Space
+│                               │
+└──────── Ghost Signal    ◀────┘
 
-```text
-Input Reality ──▶ Neural Encoder ──▶ Latent Perception
-      │                                  │
-      └──────────── Ghost Signal ◀───────┘
 
-Deviation = Detection
-Confusion = Signal
+- Encoder compresses perception  
+- Latent space defines baseline reality  
+- Deviation reveals the unseen  
 
+The system does not explain the ghost.  
+It exposes it.
 
 ---
 
-##🩸 Capabilities
-🧿 Unsupervised anomaly perception
-🕶️ Latent-space distortion mapping
-⚠️ Silent failure detection
-🧠 Pattern sensing without labels
-🩸 Detection of the “uncomfortable unknown”
+## 🩸 Capabilities
 
-   ---
+- Unsupervised anomaly detection  
+- Latent-space deviation sensing  
+- Silent failure identification  
+- Pattern perception without labels  
+- Detection of the “unknown unknowns”  
 
-🧬 Tech Stack
-Python
-NumPy / Pandas
-PyTorch / TensorFlow
-Scikit-learn
-Matplotlib
+---
 
- ---
+## 🧬 Tech Stack
 
-⚙️ Installation
+- Python  
+- NumPy / Pandas  
+- PyTorch / TensorFlow  
+- Scikit-learn  
+- Matplotlib  
+
+Minimal UI.  
+Maximum signal.
+
+---
+
+## ⚙️ Installation
+
+```bash
 git clone https://github.com/your-username/ghost-vision.git
 cd ghost-vision
 pip install -r requirements.txt
 
----
 
-▶️ Usage
-python main.py
