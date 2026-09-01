@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GhostVision ? AI Cyber Threat Intelligence SOC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #06090e;
+      --card-bg: rgba(13, 20, 36, 0.85);
+      --card-border: rgba(239, 68, 68, 0.25);
+      --accent-red: #ef4444;
+      --accent-glow: rgba(239, 68, 68, 0.4);
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --cyan: #38bdf8;
+      --green: #22c55e;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 32px 20px;
+      line-height: 1.5;
+    }
+    .container { max-width: 1040px; margin: 0 auto; }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 28px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .logo h1 {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      background: linear-gradient(135deg, #fff 30%, var(--accent-red));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    @media (max-width: 840px) { .grid { grid-template-columns: 1fr; } }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 24px;
+    }
+    .card.alert { border-color: var(--card-border); }
+    .input-group { margin-bottom: 14px; }
+    .input-group label { display: block; font-size: 12px; color: var(--muted); margin-bottom: 4px; font-family: 'JetBrains Mono', monospace; }
+    .input-box {
+      width: 100%;
+      padding: 10px 14px;
+      border-radius: 8px;
+      background: #030712;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #fff;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+    }
+    .btn {
+      width: 100%;
+      padding: 12px 20px;
+      border-radius: 10px;
+      border: none;
+      background: var(--accent-red);
+      color: #fff;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      box-shadow: 0 0 20px var(--accent-glow);
+      margin-top: 8px;
+    }
+    .btn:hover { background: #dc2626; }
+    .terminal {
+      background: #030712;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 16px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: #cbd5e1;
+      max-height: 380px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <h1>GhostVision</h1>
+        <p style="font-size: 13px; color: var(--muted); margin-top: 2px;">AI Cyber Threat Intelligence & ML Anomaly Detection Platform</p>
+      </div>
+      <div style="font-size: 12px; color: #22c55e; font-weight: 600; font-family: 'JetBrains Mono', monospace;">? ML MODEL ACTIVE (MITRE ATT&CK)</div>
+    </header>
+
+    <div class="grid">
+      <div class="card">
+        <h2 style="font-size: 17px; margin-bottom: 16px;">?? Ingest Network Telemetry</h2>
+        <div class="input-group">
+          <label>Target IP Address</label>
+          <input id="ip" class="input-box" value="192.168.1.144">
+        </div>
+        <div class="input-group">
+          <label>Destination Port</label>
+          <input id="port" class="input-box" value="4444" type="number">
+        </div>
+        <div class="input-group">
+          <label>Failed Login Count (Window)</label>
+          <input id="logins" class="input-box" value="9" type="number">
+        </div>
+        <div class="input-group">
+          <label>Packet Entropy (0.0 - 8.0)</label>
+          <input id="entropy" class="input-box" value="7.8" type="number" step="0.1">
+        </div>
+        <button class="btn" onclick="analyzeThreat()">Analyze Telemetry with ML Model</button>
+      </div>
+
+      <div class="card alert">
+        <h2 style="font-size: 17px; margin-bottom: 16px;">??? MITRE & Anomaly Intelligence Verdict</h2>
+        <div id="output" class="terminal">Ready. Click Analyze to run machine learning anomaly scoring and MITRE ATT&CK mapping...</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    async function analyzeThreat() {
+      const out = document.getElementById('output');
+      out.innerText = 'Evaluating features with ML ensemble...';
+
+      const payload = {
+        ip_address: document.getElementById('ip').value,
+        dest_port: parseInt(document.getElementById('port').value),
+        failed_login_count: parseInt(document.getElementById('logins').value),
+        packet_entropy: parseFloat(document.getElementById('entropy').value),
+        outbound_volume_mb: 450.0
+      };
+
+      try {
+        const res = await fetch('/api/v1/analyze', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+        out.innerText = JSON.stringify(data, null, 2);
+      } catch (e) {
+        out.innerText = 'Error: ' + e.message;
+      }
+    }
+  </script>
+</body>
+</html>
